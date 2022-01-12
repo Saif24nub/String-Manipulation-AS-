@@ -1,0 +1,11 @@
+DECLARE DONUTS : INTEGER
+
+        DONUTS = 0
+
+        OUTPUT"ENTER NUMBER OF DONUTS:"
+      IF DONUTS >= 10 THEN
+            OUTPUT"MANY"
+        ELSE
+            OUTPUT"NUMBER OF DONUTS:" & DONUTS
+        END IF
+        END
