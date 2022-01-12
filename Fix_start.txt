@@ -1,0 +1,28 @@
+ DECLARE STR1, STR2, STR3 : STRING
+        DECLARE CHAR1, CHAR2 : CHARACTER
+         DECLARE X : INTEGER
+
+        X = 0
+        STR1<--" "
+        STR2<--" "
+        STR3<--" "
+        CHAR1<--''
+        CHAR2<--''
+
+        OUTPUT"ENTER A STRING: "
+        INPUT STR1
+        STR1 = UPPERCase(STR1)
+
+        CHAR1 = LEFT(STR1, 1)
+        STR2 = RIGHT(STR1, Len(STR1) - 1)
+        FOR X = 1 To LENGTH(STR2)
+            CHAR2 = MID(STR2, X, 1)
+            IF CHAR2 = CHAR1 THEN
+                STR3 = STR3 & '*'
+            ELSE
+                STR3 = STR3 & CHAR2
+            ENDIF
+        Next
+        
+        OUTPUT"PROCESSED STRING IS: " & CHAR1 & STR3)
+        END
