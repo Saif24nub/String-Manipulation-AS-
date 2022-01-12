@@ -1,0 +1,24 @@
+DECLARE STR1, STR2 : STRING
+        DECLARE A, B, C, D, E : STRING
+        
+        STR1<--""
+        STR2<--""
+        A<--""
+        C<--""
+        D<--""
+        E<--""
+
+        OUTPUT"ENTER A FIRST STRING: "
+        INPUT STR1
+
+        OUTPUT"ENTER A SECOND STRING: "
+        INPUT STR2
+
+        A<--LEFT(STR1, 2)
+        B<--LEFT(STR2, 2)
+        C<--RIGHT(STR1, Len(STR1) - 2)
+        D<--RIGHT(STR2, Len(STR2) - 2)
+        E<--B + C + " " + A + D
+
+        OUTPUT"PROCESSED STRING IS: " + E
+        END
