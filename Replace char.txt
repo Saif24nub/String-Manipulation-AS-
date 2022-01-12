@@ -1,0 +1,32 @@
+DECLARE STR1, STR2 : STRING
+    DECLARE THISCHAR, CHAR1, CHAR2 : CHARACTER
+    DECLARE X : INTEGER
+
+        STR1<--""
+        STR1<--""
+        STR2<--""
+        THISCHAR<--''
+        CHAR1<--''
+        CHAR2<--''
+        X<--0
+
+ OUTPUT "ENTER THE STRING: "
+       INPUT STR1
+
+OUTPUT"ENTER THE CHARACTER TO REMOVE"
+       INPUT CHAR1
+
+ OUTPUT"ENTER THE CHARACTER TO REPLACE WITH"
+       INPUT CHAR2
+
+FOR X<--1 To Length(STR1)
+            THISCHAR<---MID(STR1, X, 1)
+            IF THISCHAR = CHAR1 THEN
+                STR2<---STR2 & CHAR2
+            ELSE
+                STR2<---STR2 & THISCHAR 
+            ENDIF
+        NEXT
+
+       OUTPUT" PROCESSED STRING IS: " , STR2
+       END
