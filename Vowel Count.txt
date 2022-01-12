@@ -1,0 +1,32 @@
+DECLARE STR 1 : STRING
+        DECLARE CHAR 1 : CHARACTER
+        DECLARE VOWELCOUNT, X : INTEGER
+
+        STR 1<--""
+        CHAR 1<--''
+        VOWELCOUNT<--0
+        X<--0
+
+        OUTPUT"ENTER A STRING: "
+        INPUT STR 1
+
+        STR 1 = UPPERCase(STR 1)
+
+        FOR X = 1 To LENGTH(STR 1)
+            CHAR 1= MID(STR 1, X, 1)
+
+             CASE OF CHAR 1
+                CASE 'A' : VOWELCOUNT = VOWELCOUNT + 1
+                CASE 'E' : VOWELCOUNT = VOWELCOUNT + 1
+                CASE 'I' : VOWELCOUNT = VOWELCOUNT + 1
+                CASE 'O' : VOWELCOUNT = VOWELCOUNT + 1
+                CASE 'U' : VOWELCOUNT = VOWELCOUNT + 1
+
+             END CASE
+
+
+
+        NEXT
+
+       OUTPUT"VOWEL COUNTED ARE: " & VOWELCOUNT
+       END
