@@ -1,0 +1,21 @@
+DECLARE STR1, STR2, CHAR1, CHAR2 : STRING
+        
+        STR1 = ""
+        STR2 = ""
+        CHAR1 =""
+        CHAR2 =""
+
+        OUTPUT"ENTER A STRING: "
+        INPUT STR1
+
+        IF LENGTH(STR1) > 2 THEN
+            CHAR1 = Left(STR1, 2)
+            CHAR2 = Right(STR1, 2)
+            STR2 = CHAR1 + CHAR2
+            OUTPUT"PROCESSED STRING IS: " & STR2
+        Else
+            OUTPUT"OUTPUT:" & STR1
+
+        End If
+
+        END 
