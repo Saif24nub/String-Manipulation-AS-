@@ -1,0 +1,18 @@
+DECLARE STR1, STR2 : STRING
+
+        STR1 = ""
+        STR2 = ""
+
+        OUTPUT"ENTER STRING: "
+        INPUT STR1
+        STR1 = UPPERCase(STR1)
+
+        IF RIGHT(STR1, 3) = "ING" THEN
+            OUTPUT"PROCESSED STRING IS:" & STR1 & "LY"
+        ELSEIF Len(STR1) >= 3 THEN
+            OUTPUT"PROCESSED STRING IS:" & STR1 & "ING"
+        ELSE
+            OUTPUT"PROCESSED STRING IS:" & STR1
+
+        ENDIF
+        END
